@@ -10,6 +10,10 @@ import {
 import HomeScreen from './src/screens/HomeScreen';
 import LoginScreen from './src/screens/LoginScreen';
 import ProfileScreen from './src/screens/ProfileScreen';
+import RegisterScreen from './src/screens/RegisterScreen';
+import UpcomingScreen from './src/screens/UpcomingScreen';
+import CarScreen from './src/screens/CarScreen';
+import HouseScreen from './src/screens/HouseScreen';
 
 export default function App() {
   const [view, setView] = useState('login');
@@ -27,9 +31,10 @@ export default function App() {
       )}
       {view === 'register' && <RegisterScreen setView={setView} />}
       {view === 'home' && <HomeScreen username={username} setView={setView} />}
-      {view === 'profile' && (
-        <ProfileScreen username={username} setView={setView} />
-      )}
+      {view === 'profile' && <ProfileScreen setView={setView} />}
+      {view === 'upcoming' && <UpcomingScreen setView={setView} />}
+      {view === 'car' && <CarScreen setView={setView} />}
+      {view === 'house' && <HouseScreen setView={setView} />}
     </View>
   );
 }

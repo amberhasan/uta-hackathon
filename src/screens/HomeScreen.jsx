@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, {useState} from 'react';
 import {
   StyleSheet,
   View,
@@ -6,31 +6,36 @@ import {
   TextInput,
   Alert,
   TouchableOpacity,
-} from "react-native";
+} from 'react-native';
 
-function HomeScreen({ username, setView }) {
+function HomeScreen({username, setView}) {
   return (
     <>
       <TouchableOpacity
         style={styles.button}
-        onPress={() => setView("profile")}
-      >
+        onPress={() => setView('profile')}>
         <Text style={styles.buttonText}>Profile</Text>
       </TouchableOpacity>
       <View style={styles.row}>
-        <TouchableOpacity style={styles.iconButton}>
+        <TouchableOpacity
+          style={styles.iconButton}
+          onPress={() => setView('house')}>
           <Text>🏠</Text>
           <Text>House</Text>
         </TouchableOpacity>
-        <TouchableOpacity style={styles.iconButton}>
+        <TouchableOpacity
+          style={styles.iconButton}
+          onPress={() => setView('car')}>
           <Text>🚗</Text>
           <Text>Car</Text>
         </TouchableOpacity>
       </View>
-      <TouchableOpacity style={styles.button}>
+      <TouchableOpacity
+        style={styles.button}
+        onPress={() => setView('upcoming')}>
         <Text style={styles.buttonText}>Upcoming...</Text>
       </TouchableOpacity>
-      <TouchableOpacity style={styles.button} onPress={() => setView("login")}>
+      <TouchableOpacity style={styles.button} onPress={() => setView('login')}>
         <Text style={styles.buttonText}>Logout</Text>
       </TouchableOpacity>
     </>
@@ -40,55 +45,55 @@ function HomeScreen({ username, setView }) {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    justifyContent: "center",
+    justifyContent: 'center',
     paddingHorizontal: 20,
-    backgroundColor: "#F3F4F6",
+    backgroundColor: '#F3F4F6',
   },
   header: {
     fontSize: 26,
-    fontWeight: "bold",
+    fontWeight: 'bold',
     marginBottom: 20,
-    textAlign: "center",
-    color: "#333",
+    textAlign: 'center',
+    color: '#333',
   },
   input: {
     height: 50,
     borderWidth: 1,
-    borderColor: "#ddd",
+    borderColor: '#ddd',
     borderRadius: 12,
     paddingHorizontal: 15,
     fontSize: 18,
-    backgroundColor: "#fff",
+    backgroundColor: '#fff',
     marginBottom: 15,
   },
   button: {
-    backgroundColor: "#667EEA",
+    backgroundColor: '#667EEA',
     borderRadius: 12,
     paddingVertical: 12,
     paddingHorizontal: 25,
-    alignItems: "center",
+    alignItems: 'center',
     marginBottom: 15,
   },
   buttonText: {
-    color: "#FFF",
+    color: '#FFF',
     fontSize: 18,
   },
   linkText: {
-    textAlign: "center",
+    textAlign: 'center',
     fontSize: 16,
-    color: "#555",
-    textDecorationLine: "underline",
+    color: '#555',
+    textDecorationLine: 'underline',
   },
   row: {
-    flexDirection: "row",
-    justifyContent: "space-between",
+    flexDirection: 'row',
+    justifyContent: 'space-between',
     marginBottom: 15,
   },
   iconButton: {
-    width: "45%",
+    width: '45%',
     padding: 15,
-    backgroundColor: "#ddd",
-    alignItems: "center",
+    backgroundColor: '#ddd',
+    alignItems: 'center',
     borderRadius: 12,
   },
 });
