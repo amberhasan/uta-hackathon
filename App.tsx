@@ -31,7 +31,16 @@ export default function App() {
       )}
       {view === 'register' && <RegisterScreen setView={setView} />}
       {view === 'home' && <HomeScreen username={username} setView={setView} />}
-      {view === 'profile' && <ProfileScreen setView={setView} />}
+      {view === 'profile' && (
+        <ProfileScreen
+          user={{
+            firstName: 'John',
+            lastName: 'Doe',
+            email: 'john.doe@example.com',
+          }}
+          setView={setView}
+        />
+      )}
       {view === 'upcoming' && <UpcomingScreen setView={setView} />}
       {view === 'car' && <CarScreen setView={setView} />}
       {view === 'house' && <HouseScreen setView={setView} />}
