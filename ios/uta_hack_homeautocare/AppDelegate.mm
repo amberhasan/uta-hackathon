@@ -1,11 +1,20 @@
 #import "AppDelegate.h"
+#import <Firebase.h>
 
 #import <React/RCTBundleURLProvider.h>
+
+
+platform :ios, '13.0'
+prepare_react_native_project!
+use_modular_headers!
 
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+  if ([FIRApp defaultApp] == nil) {
+    [FIRApp configure]; 
+  }
   self.moduleName = @"uta_hack_homeautocare";
   // You can add your custom initial props in the dictionary below.
   // They will be passed down to the ViewController used by React Native.
