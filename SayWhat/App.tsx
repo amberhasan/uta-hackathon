@@ -5,39 +5,10 @@ import React from 'react';
 import {View, Text, StyleSheet} from 'react-native';
 import {NavigationContainer} from '@react-navigation/native';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
-
-// Screen Components for each Tab
-function HomeScreen() {
-  return (
-    <View style={styles.center}>
-      <Text>Home Screen</Text>
-    </View>
-  );
-}
-
-function DiscoverScreen() {
-  return (
-    <View style={styles.center}>
-      <Text>Discover Screen</Text>
-    </View>
-  );
-}
-
-function FavoritesScreen() {
-  return (
-    <View style={styles.center}>
-      <Text>Favorites Screen</Text>
-    </View>
-  );
-}
-
-function SearchScreen() {
-  return (
-    <View style={styles.center}>
-      <Text>Search Screen</Text>
-    </View>
-  );
-}
+import HomeScreen from './src/screens/HomeScreen';
+import DiscoverScreen from './src/screens/DiscoverScreen';
+import FavoritesScreen from './src/screens/FavoritesScreen';
+import SearchScreen from './src/screens/SearchScreen';
 
 const Tab = createBottomTabNavigator();
 
